@@ -1,0 +1,16 @@
+<div [ngClass]="{'court':t.duree<'120','long':t.duree>'120'}">
+    <h3>{{t.titre}}</h3><br>
+    <img [src]="t.affiche"><span>duree{{t.duree }} minutes </span>
+    <label>profil</label><select>
+        <option *ngFor="let f of profil">{{f}}</option>
+       <!-- <ng-container *ngFor="let f of profil"> -->
+        <ng-container [ngSwitch]="profil">
+        <span *ngSwitchCase="retraite">2.5dt</span>
+        <span *ngSwitchCase="etudiant">3.dt</span>
+        <span *ngSwitchCase="autre">6dt</span>
+        <span *ngSwitchDefault>invlid</span>
+        </ng-container>
+    <!-- </ng-container> -->
+    </select>
+
+</div>

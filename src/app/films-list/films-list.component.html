@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+
+<div>
+<ul *ngFor="let t of film">
+    <li><app-film [t]="film"></app-film></li>
+</ul>
+<p>donnez la duree minimale du film</p><input type="number" [(ngModel)]="F"><br>
+<p></p>
+</div>
